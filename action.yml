@@ -1,0 +1,15 @@
+name: 'Build Information'
+description: 'Creates a build-info.json file for the current build.'
+inputs:
+  output-name:  # Where to store the build informatin.
+    description: 'Name and path where the build informatin is to be stored.'
+    required: false
+    default: './build-info.json'
+  format:
+    description: 'What file format to use. json is currently the only supported value.'
+    required: false
+    default: 'json'
+
+runs:
+  using:  'node16'
+  main:   'dist/index.js'
